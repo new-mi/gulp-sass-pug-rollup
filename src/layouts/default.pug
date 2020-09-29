@@ -1,0 +1,41 @@
+include ../components/components
+block variables
+
+- var activePage = activePage
+
+doctype html
+html(lang="ru-RU")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    <!--[if IE]>
+    meta(http-equiv='X-UA-Compatible' content="IE = edge")
+    <![endif]-->
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(name="keywords" content="")
+
+    <!--favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!--favicon end-->
+
+    link(rel="stylesheet" type='text/css' href="assets/css/libs.min.css")
+    link(rel="stylesheet" type='text/css' href="assets/css/main.css")
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Google Fonts end-->
+
+
+    <!--[if lt IE 9]>
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+    <![endif]-->
+  body(class=pageClass)
+    .page
+      //- include ../components/Header/Header
+      main.main
+        block content
+      //- include ../components/Footer/Footer
+    script(src="assets/js/libs.min.js")
+    script(src="assets/js/main.js")
+    block script
